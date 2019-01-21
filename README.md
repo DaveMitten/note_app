@@ -1,7 +1,7 @@
 # Note App
 
 ## Purpose
-A demonstration and practice for myself of the capabilities of using Slate JS. 
+A demonstration and practice for myself of the capabilities of using Slate JS, React and ANTD UI library. 
 
 ## Use
 It is for taking notes. Simple, but with rich text editing and use of the vast features in Slate JS.
