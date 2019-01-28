@@ -33,11 +33,8 @@ const initialValue = Value.fromJSON({
 //   MarkHotkey({ key: 'b', type: 'bold' })
 // ]
 
-
-
-
+ 
  class MainEditor extends Component {
-
 	 // function to toggle the mark associated with the button
 	 onMarkClick = (e, type) => {
     // prevents any default browser behaviour like page refresh etc
@@ -51,6 +48,7 @@ const initialValue = Value.fromJSON({
   this.onChange(change);
   }
 
+
 	state = {
 		value: initialValue,
 	  }
@@ -61,11 +59,11 @@ const initialValue = Value.fromJSON({
 		}
 		
 
-		onClickMark(event, type) {
-			const { editor } = this.props;
-			event.preventDefault();
-			editor.toggleMark(type);
-		}
+		// onClickMark(event, type) {
+		// 	const { editor } = this.props;
+		// 	event.preventDefault();
+		// 	editor.toggleMark(type);
+		// }
 
 
   render() {
@@ -80,7 +78,9 @@ const initialValue = Value.fromJSON({
 	  </div>
 	)
 	}
-	
+	//so what am i actually passing from the button to here to be passed through renderMark?
+	// I need the word bold, i don't neccessarily need the handle in the sidepanelbutton.js
+
 
   renderMark = (props, editor, next) => {
     switch (props.mark.type) {
