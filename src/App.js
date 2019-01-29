@@ -10,19 +10,17 @@ const { Header, Content, Footer } = Layout;
 
 
 class App extends Component {
+
   constructor(props) {
-    super(props);
-    this.MainEditorRef= React.createRef();
+    super(props);    
   }
 
 
 
 
-  onClickMark(event) {
-    const { editor } = this.props.MainEditorRef;
-    event.preventDefault();
+  onClickMark = ()  => {
+    const { editor } = this.editor;
     editor.toggleMark('bold');
-    console.log('onClickMark activated:')
   }
 
 
@@ -47,8 +45,8 @@ class App extends Component {
             <Col span={18}> 
           <Content style={{ padding: '50px 10px 0 50px', height: '100%' }}>
             <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-              <MainEditor ref={this.MainEditorRef} />
-            
+              <MainEditor innerRef={editor => this.editor = editor} />
+            {/* ABove is the editor ref. The arrow function is replacing he need to delcare the creaTeRef in the state. This arrow function represents what the ref is doing, how it works, how it creates the ref. */}
             
             
             </div>

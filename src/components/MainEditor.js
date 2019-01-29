@@ -74,6 +74,7 @@ const initialValue = Value.fromJSON({
 		value={this.state.value} 
 		onChange={this.onChange}
 		renderMark={this.renderMark}
+		ref={this.props.innerRef}
 		 />
 	  </div>
 	)

@@ -22,7 +22,7 @@ class SidePanelButtons extends Component {
 	  <div>
 	  <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
               <Button style={{ margin: '5px' }} type="primary" 
-              onClick={this.props.onClickMark}
+              onClick={() => this.props.onClickMark()}
               
               >
                 B
